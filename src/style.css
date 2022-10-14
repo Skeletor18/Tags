@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  max-width: 60%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body {
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  background-size: 400%;
+  animation: gradient 3s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+form {
+  margin-top: 20px;
+}
+form button {
+  background-color: blue;
+  margin-left: 10px;
+  padding: 11px 30px;
+  border: none;
+  border: 2px solid blue;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+form input {
+  border-radius: 5px;
+  padding: 10px 100px;
+  text-align: center;
+  border: none;
+  border: 2px solid blue;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: transparent;
+  color: blue;
+}
+.tags {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 55%;
+  background-color: transparent;
+}
+.tag_text {
+  background-color: rgba(0, 0, 255, 0.211);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.tag_text span {
+  padding: 10px 15px;
+  color: rgba(0, 0, 255, 0.774);
+  font-size: 22px;
+}
+
+.tag_text button {
+  border: none;
+  background-color: rgba(0, 0, 255, 0.774);
+  color: white;
+  border-radius: 100px;
+  padding: 8px 10px;
+  font-size: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 5px rgb(255, 68, 0);
+  }
+}
+.tag_text button:hover {
+  animation: pulse 2s ease infinite;
+}
+
+.error_text {
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.glitch-text {
+  font-size: 8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: animateGlitchText 1200ms infinite;
+}
+@keyframes animateGlitchText {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
